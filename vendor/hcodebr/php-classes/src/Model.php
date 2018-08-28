@@ -13,7 +13,8 @@ class Model
 
         switch ($method) {
             case "get":
-                return $this->values[$fieldName];
+                return (isset($this->values[$fieldName])) ? $this->values[$fieldName] : NULL;
+
                 break;
             case "set":
                 $this->values[$fieldName] = $args[0];
@@ -22,17 +23,24 @@ class Model
         }
     }
 
+//    public function setData($data = array())
     public function setData($data = array())
     {
         foreach ($data as $key => $value) {
-            $this->{"set" . $key}($value);
+            $this->
+            {
+            "set" . $key
+            }
+
+            ($value);
         }
     }
 
     /**
      * @return array
      */
-    public function getValues()
+    public
+    function getValues()
     {
         return $this->values;
     }
